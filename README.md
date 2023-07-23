@@ -567,3 +567,7 @@ you have trained your new model on the new data.
 ## License
 
 [License](LICENSE.txt)
+
+## LInk to my W&B repository
+https://wandb.ai/udacity-test/nyc_airbnb/artifacts/model_export/random_forest_export/7422f23536261a0e3c68/lineage
+
