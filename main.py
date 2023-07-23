@@ -122,7 +122,7 @@ def go(config: DictConfig):
 
             # Test regression model
             _ = mlflow.run(
-                os.path.join(hydra.utils.get_original_cwd(), "src", "test_regression_model"),
+                f"{config['main']['components_repository']}/test_regression_model",
                 "main",
                 parameters={
                     "mlflow_model": "random_forest_export:prod",

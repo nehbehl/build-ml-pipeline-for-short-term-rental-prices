@@ -27,6 +27,10 @@ def go(args):
     logger.info("Dropping outliers")
     df = df[(df["price"] < args.max_price) & (df["price"] > args.min_price)]
 
+    # Add additional cleaning
+    idx = df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)
+    df = df[idx].copy()
+
     df.to_csv(args.output_artifact, index=False)
     # Download input artifact. This will also log that this script is using this
     # particular version of the artifact
