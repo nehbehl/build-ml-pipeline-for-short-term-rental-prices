@@ -4,5 +4,8 @@ channels:
   - defaults
 dependencies:
   - pip=20.3.3
+  - pandas=1.2.3
+  - pyarrow=2.0
+  - numpy=1.23.5
   - pip:
       - wandb==0.13.9

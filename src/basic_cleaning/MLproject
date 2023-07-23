@@ -5,18 +5,30 @@ entry_points:
   main:
     parameters:
 
-      parameters1:
-        description: ## ADD DESCRIPTION
+      input_artifact:
+        description: Name for the W&B artifact that will be taken as input from previous step
         type: string
 
-      parameter2:
-        description: ## ADD DESCRIPTION
+      output_artifact:
+        description: Name for the W&B artifact that will be created
         type: string
 
-      parameter3:
-        description: ## ADD DESCRIPTION
+      output_type:
+        description: Type of the artifact created
         type: string
+
+      output_description:
+        description: Description of the output artifact
+        type: string 
+
+      min_price:
+        description: minimum price to consider
+        type: float
+
+      max_price:
+        description: maximum price to consider
+        type: float
 
 
     command: >-
-        python run.py  --parameters1 {parameters1}  --parameter2 {parameter2}  --parameter3 {parameter3} 
+        python run.py  --input_artifact {input_artifact}  --output_artifact {output_artifact}  --output_type {output_type} --output_description {output_description} --min_price {min_price} --max_price {max_price}
